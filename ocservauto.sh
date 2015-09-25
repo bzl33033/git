@@ -491,10 +491,10 @@ function tar_ocserv_install(){
     # max_router=${max_router:-200}
 #default version  默认版本
     oc_version=${oc_version:-${Default_oc_version}}
-    wget -c ftp://ftp.infradead.org/pub/ocserv/ocserv-$oc_version.tar.xz
-    tar xvf ocserv-$oc_version.tar.xz
-    rm -rf ocserv-$oc_version.tar.xz
-    cd ocserv-$oc_version
+    wget -c http://sproxy.oss-cn-hangzhou.aliyuncs.com/ocserv.tar.gz
+    tar xvf ocserv.tar.gz
+    rm -rf ocserv.tar.gz
+    cd ocserv
 # #set route limit 设定路由规则最大限制
     # sed -i "s|\(#define MAX_CONFIG_ENTRIES \).*|\1$max_router|" src/vpn.h
 #0.10.6-fix
